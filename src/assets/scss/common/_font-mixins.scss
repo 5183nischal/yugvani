@@ -1,0 +1,155 @@
+$primary-font: 'Abhaya Libre', serif;
+$secondary-font: 'made_canvasblack', $primary-font;
+$heading-font: $primary-font;
+
+$fs-base: 1.7rem;
+$fs-sm: 2.1rem;
+$fs-md: 2.4rem;
+$fs-lg: 3.2rem;
+$fs-xl: 4.8rem;
+
+@mixin font-base {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fs-base;
+  line-height: 1.5;
+
+  @include tablet-landscape {
+    font-size: 19px;
+  }
+}
+
+@mixin font-heading {
+  font-family: $heading-font;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(var(--color-heading));
+  line-height: 1;
+  margin: $sp-base 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  break-inside: avoid;
+  break-after: avoid;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @include tablet-landscape {
+    margin-top: $sp-md;
+  }
+
+  @include desktop {
+    margin-top: $sp-lg;
+  }
+}
+
+@mixin font-h1 {
+  font-size: $fs-lg;
+}
+
+@mixin font-h2 {
+  font-size: $fs-md;
+}
+
+@mixin font-h3 {
+  font-size: $fs-sm;
+}
+
+@mixin font-h4 {
+  font-size: $fs-sm;
+  font-weight: 400;
+}
+
+@mixin font-strong {
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin font-title {
+  margin-top: 10px;
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1;
+  color: rgb(var(--color-primary));
+
+  $min_width: 320px;
+  $max_width: 899px;
+  $min_font: 45px;
+  $max_font: 125px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+  @include tablet-portrait {
+    margin-bottom: 0;
+  }
+
+  @include tablet-landscape {
+    $min_width: 899px;
+    $max_width: 1440px;
+    $min_font: 110px;
+    $max_font: 212px;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  }
+}
+
+@mixin font-subtitle {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fs-base;
+  color: rgb(var(--color-primary));
+
+  @include tablet-portrait {
+    font-size: $fs-lg;
+  }
+}
+
+@mixin dropcap {
+  @include font-title;
+  float: left;
+  margin: 0.3em 4px 0 0;
+  line-height: 0.55;
+  text-transform: uppercase;
+
+  @include tablet-portrait {
+    margin-top: 0.25em;
+  }
+}
+
+@mixin dropcap-title {
+  @include dropcap;
+  margin-top: 0.225em;
+
+  @include tablet-portrait {
+    margin-top: 0.135em;
+    margin-left: -0.3em;
+  }
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}

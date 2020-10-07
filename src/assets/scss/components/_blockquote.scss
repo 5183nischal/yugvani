@@ -1,0 +1,51 @@
+blockquote {
+  margin: 3rem 0;
+  padding: $sp-sm 0;
+  border-top: 1px solid rgba(var(--color-primary), 0.3);
+  border-bottom: 1px solid rgba(var(--color-primary), 0.3);
+  font-weight: 700;
+  font-size: $fs-md;
+  break-inside: avoid;
+
+  @include tablet-portrait {
+    padding-left: $sp-sm;
+    padding-right: $sp-sm;
+  }
+
+  p {
+    margin-top: 0;
+
+    &:first-child {
+      &::before {
+        content: '\201C ';
+      }
+
+      &::after {
+        content: '\201D ';
+      }
+    }
+  }
+
+  a {
+    display: inline;
+  }
+
+  cite {
+    font-style: normal;
+
+    &::before {
+      content: '\2013 ';
+    }
+  }
+
+  &.column-span {
+    column-span: all;
+    margin-top: $sp-lg;
+    margin-bottom: $sp-lg;
+    border-width: 15px;
+
+    & + * {
+      margin-top: 0;
+    }
+  }
+}

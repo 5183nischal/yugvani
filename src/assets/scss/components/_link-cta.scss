@@ -1,0 +1,24 @@
+.link-cta {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  background: none;
+
+  &::before {
+    content: '';
+    $width: 3.7rem;
+    min-width: $width;
+    height: 17px;
+    margin: 0 $sp-xs 0 #{($sp-xs + $width) * -1};
+    background: url('../svg/arrow.svg') no-repeat left center;
+    transition: transform $d-slow $ease-in-out;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &::before {
+      transform: translateX(25%);
+    }
+  }
+}

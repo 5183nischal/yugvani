@@ -1,0 +1,95 @@
+.about-page,
+.chapters-page,
+.content-page .header {
+  display: grid;
+
+  // formula: (window-width - (padding + (gutter * (columns - 1))) / columns) - gutter
+  // because there's less gutters then columns, we only subtract it once from the window-width
+  grid-template-columns: repeat(
+    var(--columns),
+    calc(((100vw - 40px - (var(--gutter) * (var(--columns) - 1))) / var(--columns)))
+  );
+  grid-gap: var(--gutter);
+
+  .nav {
+    grid-column: 1 / -1;
+    justify-self: end;
+  }
+
+  .title {
+    grid-column: 1 / -1;
+  }
+
+  .subtitle {
+    grid-column: 1 / -1;
+  }
+
+  .chapters {
+    grid-column: 1 / -1;
+  }
+
+  @include phone {
+    .nav {
+      grid-column: 1 / 6;
+      justify-self: end;
+    }
+
+    .title {
+      grid-column: 1 / 6;
+    }
+
+    .subtitle {
+      grid-column: 1 / 5;
+    }
+
+    .chapters {
+      grid-column: 1 / 6;
+    }
+  }
+
+  @include tablet-portrait {
+    grid-row-gap: calc(var(--gutter) * 2);
+
+    .nav {
+      grid-column: 8 / 10;
+      grid-row: 1 / 2;
+      align-self: end;
+      position: relative;
+      top: -5%;
+    }
+
+    .title {
+      grid-column: 2 / 10;
+      grid-row: 1 / 2;
+    }
+
+    .subtitle {
+      grid-column: 2 / 9;
+    }
+
+    .chapters {
+      grid-column: 2 / -2;
+    }
+  }
+
+  @include tablet-landscape {
+    // griddddd
+    .nav {
+      grid-column: 11 / 12;
+      grid-row: 1 / 2;
+    }
+
+    .title {
+      grid-column-end: 12;
+    }
+
+    .subtitle {
+      grid-column: 10 / 13;
+      grid-row: 1 / 4;
+    }
+
+    .chapters {
+      grid-column-end: -3;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.chapters {
+  &__list {
+    @extend %list-reset;
+    counter-reset: chapter-counter;
+  }
+
+  &__item {
+    border-bottom: 3px solid rgba(var(--color-primary), 0.1);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+
+  }
+
+  &__anchor {
+    display: rigid;
+    align-items: center;
+    justify-content: space-between;
+    padding: $sp-sm 0;
+    font-size: $fs-md;
+    background: none;
+    letter-spacing: 0;
+    transition: letter-spacing $d-slower $ease-out;
+
+    &:hover {
+      letter-spacing: 0.02em;
+
+      &:after {
+        letter-spacing: 0;
+      }
+    }
+
+    @include tablet-portrait {
+      font-size: $fs-lg;
+    }
+
+    @include tablet-landscape {
+      font-size: 40px;
+    }
+  }
+}

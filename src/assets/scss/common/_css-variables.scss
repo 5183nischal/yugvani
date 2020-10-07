@@ -1,0 +1,55 @@
+:root {
+  // COLOR VARIABLES
+
+  --color-dark: #1d1d1d;
+  --color-white: #fff;
+  --color-invalid: #c61617;
+  --color-success: #56c271;
+  --color-disabled: #ddd;
+
+  // RGB colors
+  --color-pink: 236, 155, 155;
+  --color-blue: 49, 24, 78;
+  --color-brown: 118, 64, 64;
+  --color-off-white: 233, 233, 233;
+  --color-mag-back: 240, 240, 240;
+  --color-text: 2, 71, 50;
+
+  --color-primary: var(--color-text);
+  --color-secondary: var(--color-mag-back);
+  --color-heading: var(--color-primary);
+
+  // GRID VARIABLES
+  --columns: 4;
+  --gutter: 10px;
+
+  @include phone {
+    --columns: 5;
+  }
+
+  @include tablet-portrait {
+    --columns: 9;
+    --gutter: 20px;
+  }
+
+  @include tablet-landscape {
+    --columns: 12;
+  }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+blockquote {
+  transition-property: color, background-color !important;
+  transition-duration: $d-slowest !important;
+  transition-timing-function: $ease-out !important;
+  transition-delay: 0s !important;
+}
+
+.theme-light:root {
+  --color-primary: var(--color-brown);
+  --color-secondary: var(--color-off-white);
+}

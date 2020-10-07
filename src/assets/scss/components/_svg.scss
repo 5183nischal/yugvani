@@ -1,0 +1,18 @@
+.svg {
+  &-rh-icon {
+    path {
+      stroke-width: 0;
+      stroke: none;
+      fill: rgb(var(--color-primary));
+    }
+  }
+
+  &-arrow,
+  &-sun-icon,
+  &-moon-icon,
+  &-twitter-icon {
+    stroke-width: 0;
+    stroke: none;
+    fill: rgb(var(--color-primary));
+  }
+}
