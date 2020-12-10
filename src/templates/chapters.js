@@ -37,10 +37,11 @@ const ChaptersPage = ({ pageContext }) => {
         <Nav />
 
         <h1 className="title" data-splitting="">
-          Articles
+          /Articles/
         </h1>
+        <hr></hr>
 
-        {chapters.length > 1 ? (
+        {chapters.length >= 1 ? (
           <nav className="chapters">
             <ol className="chapters__list">
               {chapters.map(({ node }) => {
@@ -60,7 +61,7 @@ const ChaptersPage = ({ pageContext }) => {
                       to={path}
                       className="chapters__anchor"
                     >
-                      {title}<sub>{intro}</sub>
+                      {title}
                     </TransitionLink>
                   </li>
                 )

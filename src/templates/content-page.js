@@ -56,19 +56,13 @@ const TemplateContent = ({ data, pageContext }) => {
             }}
             to="/"
             className="logo"
-          >
-            /Yugvani/
-            <br /> ideas of
-            <br /> Nepal
-          </TransitionLink>
+          ></TransitionLink>
 
           <Nav />
 
           <h1 className="title" data-splitting="">
             {frontmatter.title}
           </h1>
-
-          {frontmatter.subtitle ? <h2 className="subtitle">{frontmatter.subtitle}</h2> : ''}
         </header>
 
         <div className="article-wrapper">

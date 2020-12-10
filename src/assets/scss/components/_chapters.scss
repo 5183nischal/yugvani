@@ -5,7 +5,7 @@
   }
 
   &__item {
-    border-bottom: 3px solid rgba(var(--color-primary), 0.1);
+    border-bottom: 1px solid rgba(var(--color-primary), 0.1);
 
     &:last-child {
       border-bottom: none;
@@ -25,7 +25,7 @@
     transition: letter-spacing $d-slower $ease-out;
 
     &:hover {
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
 
       &:after {
         letter-spacing: 0;

@@ -51,11 +51,10 @@
     grid-row-gap: calc(var(--gutter) * 2);
 
     .nav {
-      grid-column: 8 / 10;
+      grid-column: 10 / 10;
       grid-row: 1 / 2;
-      align-self: end;
       position: relative;
-      top: -5%;
+      top: 20%;
     }
 
     .title {
@@ -64,7 +63,7 @@
     }
 
     .subtitle {
-      grid-column: 2 / 9;
+      grid-column: 1 / 9;
     }
 
     .chapters {
@@ -75,21 +74,22 @@
   @include tablet-landscape {
     // griddddd
     .nav {
-      grid-column: 11 / 12;
+      top: 25%;
+      grid-column: 1 / 12;
       grid-row: 1 / 2;
     }
 
     .title {
-      grid-column-end: 12;
+      grid-column: 1/11;
     }
 
     .subtitle {
-      grid-column: 10 / 13;
-      grid-row: 1 / 4;
+      grid-column: 1 / 12;
+      grid-row: 2 / 4;
     }
 
     .chapters {
-      grid-column-end: -3;
+      grid-column: 1 / 9;
     }
   }
 }

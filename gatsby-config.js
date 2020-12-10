@@ -4,12 +4,11 @@ const cssnano = require('css-mqpacker') // super compressor
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://principlesofwealth.net`,
+    siteUrl: `https://yugvani.netlify.app`,
     title: `Essays on Contemporary Nepal`,
     description: `Essays on Contemporary Nepal`,
     twitter_handle: `@nischmainali`,
-    keywords:
-      'Nepal',
+    keywords: 'Nepal',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -70,13 +69,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `principles-of-wealth`,
-        short_name: `wealth`,
+        name: `yugvani`,
+        short_name: `yugvani`,
         start_url: `/`,
         background_color: `#fef6e4`,
         theme_color: `#fef6e4`,
         display: `minimal-ui`,
-        icon: `src/assets/favicon/favicon-32x32.png`, // This path is relative to the root of the site.
+        icon: `src/assets/favicon/profile-img.png`, // This path is relative to the root of the site.
       },
     },
     {

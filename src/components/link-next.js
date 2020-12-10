@@ -11,7 +11,7 @@ const LinkNext = ({ path, title }) => {
   if (!path || !title) {
     return (
       <a
-        href="https://www.flowen.me"
+        href="https://www.nischalmainali.xyz"
         target="_blank"
         rel="noopener noreferrer"
         className={`link-next ${intersected ? 'show' : null}`}
@@ -19,7 +19,7 @@ const LinkNext = ({ path, title }) => {
         <div className="link-next__wrapper" ref={refObserver}>
           <div className="link-next__label">Made by</div>
           <div className="link-next__title" data-splitting="">
-            Yugvani
+            Nischal
           </div>
         </div>
       </a>

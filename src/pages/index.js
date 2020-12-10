@@ -22,23 +22,19 @@ const AboutPage = () => {
   return (
     <>
       {}
-      <SEO
-        title="Yugvani"
-        description="Essays on Contemporary Nepal"
-      />
+      <SEO title="Yugvani" description="Essays on Contemporary Nepal" />
 
       <div className="about-page">
         <Nav />
         <h1 className="title" data-splitting="">
           /Yugvani/
-          <br /> ideas of 
+          <br /> ideas of
           <br /> Nepal
         </h1>
 
-        <h1 className="subtitle">Essays on science, art, philosophy, politics, & literature for contemporary Nepal</h1>
-
-        
-                
+        <h1 className="subtitle">
+          Essays on science, art, philosophy, politics, & literature for contemporary Nepal
+        </h1>
       </div>
     </>
   )

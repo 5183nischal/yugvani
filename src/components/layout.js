@@ -10,8 +10,8 @@ import { setConfig } from 'react-hot-loader'
 
 import Footer from '../components/footer'
 
-import twitterCard from '../assets/cards/twitter-card.png'
-import ogCard from '../assets/cards/og-card.png'
+import twitterCard from '../assets/cards/profile-img.png'
+import ogCard from '../assets/cards/profile-img.png'
 
 let Splitting
 if (typeof window !== `undefined`) {
@@ -103,13 +103,6 @@ const Layout = ({ children }) => {
       />
 
       <main className={`layout`}>{children}</main>
-
-      <Footer
-        themeDark={themeDark}
-        setThemeDark={setThemeDark}
-        menuOpen={menuOpen}
-        setMenuOpen={setMenuOpen}
-      />
     </>
   )
 }

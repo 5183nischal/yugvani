@@ -76,7 +76,7 @@ const SEO = ({ description, lang, meta, title, socialImage }) => {
         {
           name: 'twitter:image',
           content: cardImage,
-        }
+        },
       ].concat(meta)}
     />
   )
@@ -95,10 +95,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-  socialImage: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.bool,
-  ]),
+  socialImage: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 }
 
 export default SEO

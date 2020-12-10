@@ -8,7 +8,7 @@ const Footer = ({ themeDark, setThemeDark, menuOpen, setMenuOpen }) => {
     <footer className="footer">
       <div className="footer__menu-wrapper">
         <label htmlFor="menu" className="footer__label" data-theme={themeDark} data-menu={menuOpen}>
-          <img src={profileImage} alt="Made by Rou Hun Fan" className="footer__menu-img" />
+          <img src={profileImage} alt="Made by Nisch" className="footer__menu-img" />
         </label>
 
         <input
@@ -55,7 +55,7 @@ const Footer = ({ themeDark, setThemeDark, menuOpen, setMenuOpen }) => {
           </li>
           <li className="footer__menu-item">
             <a
-              href="https://twitter.com/flowen_nl"
+              href="https://twitter.com/nischamainali"
               target="_blank"
               rel="noopener noreferrer"
               className="footer__menu-anchor"

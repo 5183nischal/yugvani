@@ -1,11 +1,21 @@
 @font-face {
   font-family: 'made_canvasblack';
-  src: url('../fonts/made_canvas_black_personal_use-webfont.woff2') format('woff2'),
-    url('../fonts/made_canvas_black_personal_use-webfont.woff') format('woff');
+  src: url('../fonts/roboto-mono-v12-latin-regular.woff2') format('woff2'),
+    url('../fonts/roboto-mono-v12-latin-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/roboto-mono-v12-latin-300.woff2') format('woff2'),
+    url('../fonts/roboto-mono-v12-latin-300.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 /**
  * Hide content
